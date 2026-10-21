@@ -101,6 +101,12 @@ int main()
     cout << "Lettres tirées : " << randomletters << endl;
 
     vector<string> dico = ReadFile();
+
+    for (char &letter : dico[49])
+    {
+        letter = tolower(letter);
+    }
+
     cout << "Mot du dico : " << dico[49] << endl;
     return 0;
 }
