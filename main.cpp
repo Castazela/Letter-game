@@ -6,7 +6,7 @@
 #include <ctime>   // Fonctions dates/heuletters_drawing
 #include <fstream> //Read and write to a file https://cplusplus.com/reference/fstream/?kw=%3Cfstream%3E
 #include <vector>
-#include <cctype>
+#include <cctype> //To use tolower() and tooper() functions
 
 using namespace std;
 
