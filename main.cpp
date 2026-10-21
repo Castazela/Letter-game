@@ -6,6 +6,7 @@
 #include <ctime>   // Fonctions dates/heuletters_drawing
 #include <fstream> //Read and write to a file https://cplusplus.com/reference/fstream/?kw=%3Cfstream%3E
 #include <vector>
+#include <cctype>
 
 using namespace std;
 
@@ -64,6 +65,10 @@ vector<string> ReadFile()
     // Read every line (word in this case)
     while (getline(file, word)) // Read line ATTENTION PAR DE ; APRÈS UNE BOUCLE
     {
+        for (char &letter : word)
+        {
+            letter = toupper(letter); // Capitalize words in the dictionary
+        }
         dico.push_back(word); // Put a word in the vector
     }
 
@@ -96,5 +101,6 @@ int main()
     cout << "Lettres tirées : " << randomletters << endl;
 
     vector<string> dico = ReadFile();
+    cout << "Mot du dico : " << dico[49] << endl;
     return 0;
 }
