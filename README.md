@@ -2,7 +2,7 @@
 
 Ce petit programme a pour but d'imiter le jeu Des chiffres et des lettres, et notamment la partie des lettres
 
-Voilà ce que fait le programme en 3 étapes : 
+Voilà ce que fait le programme en 3 étapes :
 
 -- On tire d'abord de façon aléatoire 9 lettres
     Avec au minimum 2 voyelles
