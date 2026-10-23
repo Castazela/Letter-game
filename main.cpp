@@ -97,16 +97,53 @@ int main()
 {
     srand(time(nullptr)); // Different seed on each run
 
+    // Tirage
     string randomletters = RandomLetters(9);
     cout << "Lettres tirées : " << randomletters << endl;
 
+    // Chargement du dictionnaire
     vector<string> dico = ReadFile();
 
-    for (char &letter : dico[49])
+    // Recherche du/des meilleur(s) mot(s)
+    vector<string> best_words;
+
+    for (string word : dico)
     {
-        letter = tolower(letter);
+        if (CanMakeWord(word, randomletters))
+        {
+            if (best_words.empty() || word.size() > best_words[0].size()) // si best_words est vide, ou si le mot est plus long que ceux de best_words
+            {
+                best_words.clear();         // vider best_words
+                best_words.push_back(word); // puis y mettre ce mot
+            }
+
+            else if (word.size() == best_words[0].size())
+            {
+                best_words.push_back(word);
+            }
+        }
     }
 
-    cout << "Mot du dico : " << dico[49] << endl;
+    // Conversion en minscule
+    for (string &word_min : best_words)
+    {
+        for (char &letter : word_min)
+        {
+            letter = tolower(letter);
+        }
+    }
+    // Affichage
+    if (best_words.empty())
+    {
+        cout << "Aucun mot n'a été trouvé" << endl;
+    }
+    else
+    {
+        cout << "Mot faisables avec le tirage :" << endl;
+        for (string &word_min : best_words)
+        {
+            cout << word_min << endl;
+        }
+    }
     return 0;
 }
