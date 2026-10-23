@@ -117,9 +117,9 @@ int main()
                 best_words.push_back(word); // puis y mettre ce mot
             }
 
-            else if (word.size() == best_words[0].size())
+            else if (word.size() == best_words[0].size()) // si le mot a la même longueur que ceux de best_words :
             {
-                best_words.push_back(word);
+                best_words.push_back(word); // l'ajouter à best_words
             }
         }
     }
