@@ -14,3 +14,10 @@ Voilà ce que fait le programme en 3 étapes :
 -- On affiche tous les mots possibles avec le maximum de lettre 
     Ex : 3 mots à 9 lettres 
     Ou 7 mots à 8 lettres
+
+Le 27/10/26 :
+Les diffiérentes fonctions ont été placées dans des fichiers séparés du main
+-- jeu.hpp permet l'annonce de toutes les fonctions utilisées dans le main
+-- letter-drawing.cpp contient les fonctions CountVowels et RandomLetters permettant d'avoir un tirage de 9 lettres avec au minimum 2 voyelles
+-- read-file.cpp permet de lire le fichier dictionnary.txt
+-- make-word.cpp vérifie quel mots (les plus grands possible) peuvent être formés avec le tirage effectué
