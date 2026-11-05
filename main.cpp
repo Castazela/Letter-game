@@ -1,5 +1,4 @@
-/*Compilation : */
-/*g++ -std=c++17 main.cpp letter-drawing.cpp read-file.cpp make-word.cpp -o main*/
+/*Compilation : g++ -std=c++17 main.cpp letter-drawing.cpp read-file.cpp make-word.cpp number-drawing.cpp -o main*/
 
 #include <iostream>
 #include <string> // Introduces string types, character traits and a set of converting functions https://cplusplus.com/reference/string/
@@ -40,7 +39,7 @@ int main()
             cout << endl;
 
             int guess_number = NumberToCalculate();
-            cout << "Le nombre à atteindre à l'aide des opérations élémentaires est : " << guess_number << endl;
+            cout << "Le nombre à atteindre je à l'aide des opérations élémentaires est : " << guess_number << endl;
 
             break;
         }
