@@ -1,5 +1,5 @@
 /*Compilation : */
-/*g++ -std=c++17 main.cpp letter-drawing.cpp read-file.cpp make-word.cpp -o main && ./main*/
+/*g++ -std=c++17 main.cpp letter-drawing.cpp read-file.cpp make-word.cpp -o main*/
 
 #include <iostream>
 #include <string> // Introduces string types, character traits and a set of converting functions https://cplusplus.com/reference/string/
@@ -26,12 +26,24 @@ int main()
         switch (choix)
         {
         case 1:
-            cout << "Patience ça arrive" << endl;
+
+            srand(time(nullptr)); // Different seed on each run
+
+            // Tirage
+            int randomnumbers[6];
+            NumberDrawing(randomnumbers);
+            cout << "Nombres tirés : ";
+            for (int nb : randomnumbers)
+            {
+                cout << nb << " ";
+            }
+            cout << endl;
+
             break;
 
         case 2:
 
-            srand(time(nullptr)); // Different seed on each run
+            srand(time(nullptr));
 
             // Tirage
             string randomletters = RandomLetters(9);

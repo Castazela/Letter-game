@@ -3,13 +3,19 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "jeu.hpp"
+
 using namespace std;
 
-int NumberDrawing(const char)
+void NumberDrawing(int drawing_numbers[])
 {
-    srand(time(NULL)); // initialize the random seed
 
-    const char numbers[14] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 50, 75, 100};
-    int number_drawing = rand() % 6;
-    return numbers[number_drawing];
+    int numbers[14] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 50, 75, 100};
+
+    // Generate random index
+    for (int i = 0; i < 6; i++)
+    {
+        int index = rand() % 6;
+        drawing_numbers[i] = numbers[index];
+    }
 }

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-// Letter-drawing.cpp
+// Letters drawing
 int CountVowels(std::string letters);
 std::string RandomLetters(int n);
 
@@ -12,3 +12,6 @@ std::vector<std::string> ReadFile();
 
 // Check wich word can be make with drawing
 bool CanMakeWord(std::string word, std::string letters);
+
+// Numbers drawing
+void NumberDrawing(int drawing_numbers[]);
