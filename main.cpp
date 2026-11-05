@@ -26,7 +26,7 @@ int main()
         switch (choix)
         {
         case 1:
-
+        {
             srand(time(nullptr)); // Different seed on each run
 
             // Tirage
@@ -39,7 +39,11 @@ int main()
             }
             cout << endl;
 
+            int guess_number = NumberToCalculate();
+            cout << "Le nombre à atteindre à l'aide des opérations élémentaires est : " << guess_number << endl;
+
             break;
+        }
 
         case 2:
 

@@ -19,3 +19,10 @@ void NumberDrawing(int drawing_numbers[])
         drawing_numbers[i] = numbers[index];
     }
 }
+
+int NumberToCalculate()
+{
+    int number_to_calculate = 100 + rand() % 999;
+
+    return number_to_calculate;
+}

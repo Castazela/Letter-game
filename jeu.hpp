@@ -15,3 +15,4 @@ bool CanMakeWord(std::string word, std::string letters);
 
 // Numbers drawing
 void NumberDrawing(int drawing_numbers[]);
+int NumberToCalculate();
