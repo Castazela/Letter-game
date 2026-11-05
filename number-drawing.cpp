@@ -13,8 +13,3 @@ int NumberDrawing(const char)
     int number_drawing = rand() % 6;
     return numbers[number_drawing];
 }
-
-int main()
-{
-    cout << "Nombres tirés :" << NumberDrawing() << endl;
-}
